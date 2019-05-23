@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -20,13 +21,13 @@ public class HomeController {
         model.addAttribute("departments", departmentRepository.findAll());
         return "deptForm";
     }
-    @RequestMapping("/emplist")
-    public String empList(Model model){
+    @PostMapping("/emplist")
+    public String empList(Employee employee,Model model){
         model.addAttribute("employees", employeeRepository.findAll());
         return "empList";
     }
-    @RequestMapping("/deptlist")
-    public String deptList(Model model){
+    @PostMapping("/deptlist")
+    public String deptList(Department department, Model model){
         model.addAttribute("departments", departmentRepository.findAll());
         return "deptList";
     }
