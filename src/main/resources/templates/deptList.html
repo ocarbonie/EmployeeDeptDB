@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-boderless">
+    <thead></thead>
+    <tbody>
+    <tr th:each="a:${departments}">
+        <th scope="row"></th>
+        <td> <b>[[${a.title}]]</b></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
