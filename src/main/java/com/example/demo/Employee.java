@@ -11,7 +11,7 @@ public class Employee {
     private String firstName;
     private String jobTitle;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "dept_id")
+    @JoinColumn(name = "department_id")
     private Department department;
 
     public long getId() {

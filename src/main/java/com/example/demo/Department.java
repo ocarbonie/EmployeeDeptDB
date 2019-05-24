@@ -10,7 +10,8 @@ public class Department {
     private long id;
     private String name;
     @OneToMany(mappedBy= "department", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    public Set<Employee> employee;
+    public Set<Employee> employees;
+
 
     public long getId() {
         return id;
@@ -28,11 +29,11 @@ public class Department {
         this.name = name;
     }
 
-    public Set<Employee> getEmployee() {
-        return employee;
+    public Set<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setEmployee(Set<Employee> employee) {
-        this.employee = employee;
+    public void setEmployees(Set<Employee> employees) {
+        this.employees = employees;
     }
 }

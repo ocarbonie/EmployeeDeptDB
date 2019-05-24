@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="#" th:action="@{/emplist}" th:object= "${employee}" method="post">
+<form action="#" th:action="@{/processEmp}" th:object= "${employee}" method="post">
     <input type="hidden" th:field="*{id}"/>
-    Department: <select name="dept" id="dept" class="customer-select" th:field="*{department}">
+    Department: <select name="department" id="department" class="customer-select" th:field="*{department}">
     <option th:each="a: ${departments}"
             th:value="${a.id}"
             th:text="${a.name}">

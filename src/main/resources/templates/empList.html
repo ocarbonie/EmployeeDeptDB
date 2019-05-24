@@ -5,18 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<table class="table table-boderless">
-    <thead></thead>
-    <tbody>
-    <tr th:each="a:${employees}">
-        <th scope="row"></th>
-        <td> [[${a.lastName}]]</td>
-        <td> [[${a.firstName}]]</td>
-        <td> [[${a.jobTitle}]]</td>
-        <td>[[${a.department}]]</td>
 
-    </tr>
-    </tbody>
-</table>
+    <ul>
+        <th:block th:each="a :${employees}">
+
+            <li> [[${a.lastName}]], [[${a.firstName}]]</li>
+            <li> [[${a.jobTitle}]]</li>
+            <li> [[${a.department.name}]]</li>
+        </th:block>
+
+    </ul>
+
 </body>
 </html>
